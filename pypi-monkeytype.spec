@@ -6,7 +6,7 @@
 #
 Name     : pypi-monkeytype
 Version  : 21.5.0
-Release  : 50
+Release  : 51
 URL      : https://files.pythonhosted.org/packages/17/89/59d5f222e88763a4dca897a1af7556f33297169c5f6db872fc64cefc3bc2/MonkeyType-21.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/17/89/59d5f222e88763a4dca897a1af7556f33297169c5f6db872fc64cefc3bc2/MonkeyType-21.5.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/17/89/59d5f222e88763a4dca897a1af7556f33297169c5f6db872fc64cefc3bc2/MonkeyType-21.5.0.tar.gz.asc
@@ -17,18 +17,15 @@ Requires: pypi-monkeytype-bin = %{version}-%{release}
 Requires: pypi-monkeytype-license = %{version}-%{release}
 Requires: pypi-monkeytype-python = %{version}-%{release}
 Requires: pypi-monkeytype-python3 = %{version}-%{release}
-Requires: retype
-Requires: typed_ast
+Requires: pypi(retype)
+Requires: pypi(typed_ast)
 BuildRequires : buildreq-distutils3
-Provides: MonkeyType
-Provides: MonkeyType-python
-Provides: MonkeyType-python3
 BuildRequires : pypi(libcst)
 BuildRequires : pypi(mypy_extensions)
+BuildRequires : pypi(retype)
 BuildRequires : pypi(setuptools)
+BuildRequires : pypi(typed_ast)
 BuildRequires : pypi(wheel)
-BuildRequires : retype
-BuildRequires : typed_ast
 
 %description
 ==========
@@ -87,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641455807
+export SOURCE_DATE_EPOCH=1641653104
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
